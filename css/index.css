@@ -52,7 +52,7 @@ body{
     }
 
 
-    .listat{
+    .ListT{
    
         width: 200px;
         margin: 30px 90px;
@@ -62,9 +62,11 @@ body{
         background-color: rgb(157, 157, 196);
     }
     
-    .listat *{
+    .ListT *{
         margin-bottom: 5px;
         border-radius: 10px;
     }
+
+    
 
 

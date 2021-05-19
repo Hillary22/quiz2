@@ -6,9 +6,9 @@ const toDoT= document.getElementById('toDoT');
 const doingT= document.getElementById('doingT');
 const doneT= document.getElementById('doneT');
 const database = firebase.database();
-
+const tareasToDoCont = document.getElementById('tareasToDoCont')
 //metodos
-
+console.log(database);
 regirtroT = ()=>{
 
 
@@ -18,10 +18,11 @@ regirtroT = ()=>{
     }
 
     let referencia =database.ref('tareas').push();
+    console.log(referencia);
     tiempo =new Date();
 
     let objPubliTarea={
-        id:descripTarea.key,
+        id: referencia.key,
         estado:'ToDo',
         descripcion:descripTarea.value,
         fecha: tiempo.getFullYear()+ "." + tiempo.getMonth() + "."+ tiempo.getDate(),
@@ -46,15 +47,15 @@ database.ref('tareas').on('value', function (data){
             let list= new ListT(valor,publiTarea.key);
 
             if(valor.estado ==='ToDo'){
-                tareasToDoCont.appendChild(list.render());
+                toDoT.appendChild(list.render());
             }
 
             if(valor.estado ==='Doing'){
-                tareasDoingCont.appendChild(list.render());
+                doingT.appendChild(list.render());
             }
 
             if(valor.estado ==='Done'){
-                tareasDoneCont.appendChild(list.render());
+                doneT.appendChild(list.render());
             }
             
         });
