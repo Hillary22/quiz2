@@ -1,11 +1,12 @@
 class ListT{
 
+
     constructor(publiTarea, key){
         this.publiTarea=publiTarea;
         this.key=key;
     }
 
-}
+
 
 render = ()=>{
 
@@ -71,6 +72,11 @@ render = ()=>{
     }
     
     //botones
+    const subirBtn= document.getElementById('subirBtn');
+    const botonAtras= document.getElementById('botonAtras');
+    const botonDelete= document.getElementById('botonDelete');
+
+
     subirBtn.addEventListener('click',subir);
     botonAtras.addEventListener('click', bajar);
     botonDelete.addEventListener('click', borrar);
@@ -83,4 +89,4 @@ render = ()=>{
     
     return component;
     }
-    
+  }
