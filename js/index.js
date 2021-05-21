@@ -6,7 +6,7 @@ const toDoT= document.getElementById('toDoT');
 const doingT= document.getElementById('doingT');
 const doneT= document.getElementById('doneT');
 const database = firebase.database();
-const tareasToDoCont = document.getElementById('tareasToDoCont')
+
 //metodos
 console.log(database);
 regirtroT = ()=>{
@@ -21,7 +21,7 @@ regirtroT = ()=>{
     console.log(referencia);
     tiempo =new Date();
 
-    let objPubliTarea={
+     objPubliTarea={
         id: referencia.key,
         estado:'ToDo',
         descripcion:descripTarea.value,
@@ -44,7 +44,7 @@ database.ref('tareas').on('value', function (data){
         publiTarea=>{
 
             let valor= publiTarea.val();
-            let list= new ListT(valor,publiTarea.key);
+            let list= new ListT(valor, publiTarea.key);
 
             if(valor.estado ==='ToDo'){
                 toDoT.appendChild(list.render());
