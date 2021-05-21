@@ -10,93 +10,89 @@ body{
         margin-top: 10px;
         padding: 15px;
         width: 95%;
-        border-radius: 8px;
-        background-color: rgba(166, 31, 168, 0.733);
+        border-radius: 4px;
+   
         
     }
     #entradaTareas *{
         margin:4px;
         padding: 8px;
         width: 15%;
-        border-radius: 8px;
+        border-radius: 4px;
         border-color:blueviolet;
     }
+    
     #descripTarea {
         width: 28%;
     }
+    
     #title{
         margin-left:30px;
-        padding: 20px;
+        width: 28%;
+        padding: 10px;
         font-family: Helvetica;
        } 
 
-    .button{
-        color: rgb(114, 25, 173);
-        background-color: rgba(255, 255, 255, 0.733);
+       .button{
+        background-color: rgb(114, 25, 173);
+        color: rgba(255, 255, 255, 0.733);
     
-    }
-    .columna{
-        text-align: center;
-        margin-top: 50px;
-    }
-
+         }
+   
     li{
+        font-weight: 800;
         color: rgb(81, 0, 148);
-        display: inline-block;
-        margin-right: 140px;
-        margin-left: 55px;
-        margin-top: 30px;
-        border-radius: 10px;
-        padding: 5% 8%;
+        margin-right: 138px;
+        margin-left: 50px;
+        margin-top: 40px;
+        padding: 4% 8%;
+         display: inline-block;
         font-size: 16px;
     }
-
 
     .ListT{
    
         width: 250px;
-        margin: 30px 90px;
-        padding: 35px 30px;
-        border-radius: 10px;  
+        margin: 40px 100px;
+        padding: 25px 40px;
+        border-radius: 5px;  
         justify-content: center;
         background-color: rgb(157, 157, 196);
     }
-    
+
     .ListT *{
-        margin-bottom: 5px;
-        border-radius: 10px;
-    }
-
-
-    #borrarBtn{
-    
-        margin-top: -10px;
-        margin-left: 260px;
-        background-color: rgb(255, 58, 58);
+        margin-bottom: 7px;
+        border-radius: 5px;
 
     }
-    #subirBtn{
-      
-        margin-top: 10px;
-        margin-left: 260px;
-        background-color: rgb(74, 147, 243);
-
+    #ListT {
+        display: inline-flex;
+        
     }
-    #bajarBtn{
-      
-        margin-top: -21px;
-        margin-left: -260px;
-        margin-bottom: 10px;
-        background-color: rgb(255, 255, 67);
+
+    #toDoT{
+    width: 400px;
+  
+    }
+
+    #doingT{
+        width: 400px;
+        justify-content: center;
+        position: relative;
+    }
+    .descripTarea{
+        width: 20px;
+        padding: 25px 2%;
+        color: rgb(252, 252, 252);
+        font-weight: 900;
+        justify-content: center;
+        font-size:large;
     }
     .date{
-        color: rgb(99, 99, 100);
-        font-size: x-small;
+        color: rgb(252, 252, 252);
+        font-size: smaller;
+    
     }
 
-
     
-
     
-
-

@@ -17,7 +17,7 @@ regirtroT = ()=>{
         return;
     }
 
-    let referencia =database.ref('tareas').push();
+    let referencia =database.ref('tareas/toDo').push();
     console.log(referencia);
     tiempo =new Date();
 
@@ -35,10 +35,10 @@ regirtroT = ()=>{
 botonTarea.addEventListener('click', regirtroT);
 
 
-database.ref('tareas').on('value', function (data){
+database.ref('tareas/toDo').on('value', function (data){
     toDoT.innerHTML= '';
-    doingT.innerHTML= '';
-    doneT.innerHTML= '';
+    
+    
     data.forEach(
 
         publiTarea=>{
@@ -49,16 +49,41 @@ database.ref('tareas').on('value', function (data){
             if(valor.estado ==='ToDo'){
                 toDoT.appendChild(list.render());
             }
-
-            if(valor.estado ==='Doing'){
-                doingT.appendChild(list.render());
-            }
-
-            if(valor.estado ==='Done'){
-                doneT.appendChild(list.render());
-            }
-            
+   
         });
 
 });
 
+database.ref('tareas/doing').on("value", function(data){
+    doingT.innerHTML= '';
+    data.forEach(
+
+        publiTareaDoing=>{
+
+            let valor= publiTareaDoing.val();
+            let list= new ListT(valor, publiTareaDoing.key);
+            if(valor.estado ==='doing'){
+            doingT.appendChild(list.render());
+            }
+        }
+
+    )
+    
+});
+
+database.ref('tareas/done').on("value", function(data){
+    doneT.innerHTML= '';
+    data.forEach(
+
+        publiTareaDone=>{
+
+            let valor= publiTareaDone.val();
+            let list= new ListT(valor, publiTareaDone.key);
+            if(valor.estado ==='done'){
+                doneT.appendChild(list.render());
+            }
+        }
+
+    )
+    
+});
