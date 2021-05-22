@@ -43,9 +43,9 @@ body{
         font-weight: 800;
         color: rgb(81, 0, 148);
         margin-right: 138px;
-        margin-left: 50px;
-        margin-top: 40px;
-        padding: 4% 8%;
+        margin-left: 70px;
+        margin-top: 30px;
+        padding: 4% 6%;
          display: inline-block;
         font-size: 16px;
     }
@@ -53,7 +53,7 @@ body{
     .ListT{
    
         width: 250px;
-        margin: 40px 100px;
+        margin: 30px 50px;
         padding: 25px 40px;
         border-radius: 5px;  
         justify-content: center;
@@ -71,20 +71,25 @@ body{
     }
 
     #toDoT{
-    width: 400px;
-  
+    width: 440px;
     }
 
     #doingT{
-        width: 400px;
+        width: 440px;
+        justify-content: center;
+        position: relative;
+    }
+
+    #doneT{
+       width: 440px;
         justify-content: center;
         position: relative;
     }
     .descripTarea{
-        width: 20px;
+   
         padding: 25px 2%;
         color: rgb(252, 252, 252);
-        font-weight: 900;
+        font-weight: 700;
         justify-content: center;
         font-size:large;
     }
@@ -92,7 +97,29 @@ body{
         color: rgb(252, 252, 252);
         font-size: smaller;
     
-    }
+    }  .borrarBtn{
+        position: relative;
+        margin-left: 230px;
+ 
+       background-color: rgb(255, 255, 255);
+       color: rgb(247, 45, 45);
+       font-weight: bold;
+      
+   }
 
-    
-    
+   .subirBtn{
+       position: relative;
+        margin-left: 230px;
+       background-color: rgb(255, 255, 255);
+       color: rgb(0, 0, 0);
+       font-weight: bold;
+   }
+
+   .bajarBtn{
+   
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+   }
+
+   
